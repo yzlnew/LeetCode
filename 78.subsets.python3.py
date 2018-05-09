@@ -7,7 +7,7 @@ class Solution:
 
         def backtrack(results, sub, start, nums):
             if start == len(nums):
-                results.append(sub.copy())
+                results.append(sub.copy())  # 格外注意不能写成 sub
             else:
                 sub.append(nums[start])
                 backtrack(results, sub, start + 1, nums)
