@@ -18,6 +18,6 @@ class Solution:
             right = max(0, max_one_side(node.right))
             self.ans = max(self.ans, node.val + left + right)
             return node.val + max(left, right)
-        self.ans = -sys.maxsize
+        self.ans = -2**31
         max_one_side(root)
         return self.ans
